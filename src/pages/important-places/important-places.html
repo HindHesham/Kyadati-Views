@@ -1,0 +1,61 @@
+
+<ion-header class="headerShadow" no-border>
+
+  <ion-navbar color="white">
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="primary"></ion-icon>
+    </button>
+    <ion-title>أماكن تهمك</ion-title>
+  </ion-navbar>
+  <ion-toolbar color="white" no-border-bottom>
+    <ion-segment [(ngModel)]="placesType" >
+      <ion-segment-button value="اماكن حكوميه" (click)="status = 'اماكن حكوميه'">
+        اماكن حكوميه
+      </ion-segment-button>
+      <ion-segment-button value="اماكن صيانه"  (click)="status = 'اماكن صيانه'">
+        اماكن صيانه
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+    
+<ion-content padding class="outer-content">
+    <ion-list >
+      <ion-row id="mapSelectionRow" >
+        <ion-item id="mapSelectionItem" class="shadowAndRadius" no-lines>
+            <ion-select [(ngModel)]="country" >
+              <ion-option value="f">مدينة الرياض</ion-option>
+              <ion-option value="m">مدينة جده</ion-option>
+            </ion-select>
+        </ion-item>
+      </ion-row>
+      <ion-row class="listRow">
+
+        <!-- اماكن حكوميه -->
+          <ion-list *ngIf="status === 'اماكن حكوميه'" class="listSchools" no-lines style="height:100% ">
+            <div id="listSchoolDiv" style="height:202px" class="shadowAndRadius" (click)="gotoProfile('importantPlacesGovernment')">
+              <div id="imgDiv" style="height:154px">
+                <img src="assets/imgs/static/place3.png"/>
+              </div>
+              <div class="patternimgAndColor" id="ratinrDiv" style="height:44px">
+                  <p>مكان رقم ۱</p>
+              </div>
+            </div>
+          </ion-list>
+
+        <!-- اماكن صيانه -->
+        <ion-list *ngIf="status === 'اماكن صيانه'" class="listSchools" no-lines style="height:100% ">
+            <div id="listSchoolDiv" class="shadowAndRadius" (click)="gotoProfile('importantPlacesMaintenance')">
+              <div id="imgDiv">
+                <img src="assets/imgs/static/place4.png"/>
+              </div>
+              <div id="ratinrDiv" class="patternimgAndColor">
+                <p>مكان رقم 1</p>
+                <rating class="ratingClass" no-padding no-mrgin [(ngModel)]="rate" readOnly="false" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half" starIconName="star" nullable="false" (ngModelChange)="saveUserRating($event)"></rating>    
+              </div>
+            </div>
+        </ion-list>
+
+      </ion-row>
+    </ion-list>
+  </ion-content>

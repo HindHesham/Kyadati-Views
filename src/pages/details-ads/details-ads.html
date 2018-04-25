@@ -1,0 +1,96 @@
+<ion-header no-border class="headerShadow">
+    
+      <ion-navbar>
+        <ion-title > عنوان الإعلان هنا </ion-title>
+      </ion-navbar>
+    
+  </ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row id="slideRow">
+
+        <ion-slides spaceBetween="5" slidesPerView='auto' centeredSlides="true">
+          <ion-slide>
+            <img src="assets/1.png">
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/2.png">              
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/2.png">              
+          </ion-slide>
+        </ion-slides>
+    </ion-row>
+
+    <ion-row id="secondRow">
+      <ion-col no-padding>
+        <div id="mainDiv1" class="shadowAndRadius">
+          <div class="detailsTitleDiv">
+            <p>
+                الموديل 
+            </p>
+            
+          </div>
+          <div class="typeSalleryDetailsDiv">
+            <p class="name">BMW S3</p>
+            <p class="sallery">3000 سي سي</p>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col no-padding>
+          <div id="mainDiv2" class="shadowAndRadius" >
+              <div class="detailsTitleDiv">
+                <p>
+                    السعر 
+                </p>
+                
+              </div>
+              <div class="typeSalleryDetailsDiv">
+                <p class="name">130,000</p>
+                <p class="sallery">ريال سعودي</p>
+              </div>
+            </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-list id="thirdRow" class="shadowAndRadius">
+      <ion-list-header id="title" no-lines >
+          تفاصيل السيارة
+      </ion-list-header>
+      <ion-row class="detailsRow">
+        <ion-col>
+          <ion-label >سنة الصنع</ion-label>
+          <p>2018</p>
+        </ion-col>
+        <ion-col>
+            <ion-label >سعة المحرك</ion-label>
+            <p>3000 سي سي</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="detailsRow">
+          <ion-col>
+            <ion-label > الأميال المقطوعة</ion-label>
+            <p>12300 كيلو متر</p>
+          </ion-col>
+          <ion-col>
+              <ion-label > نوع الوقود</ion-label>
+              <p>ممتاز </p>
+          </ion-col>
+         
+          
+        </ion-row>
+      
+        
+    </ion-list>
+  </ion-grid>
+  <ion-fab  bottom right edge>
+      <button ion-fab ><ion-icon name="call"></ion-icon></button>
+  </ion-fab>
+</ion-content>
+<ion-footer no-border>
+  <ion-toolbar no-lines>
+
+  </ion-toolbar>
+</ion-footer>

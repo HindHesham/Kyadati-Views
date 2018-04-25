@@ -1,0 +1,70 @@
+<!--
+  Generated template for the FilterAdsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border class="headerShadow">
+    
+    <ion-navbar hideBackButton="true">
+      <ion-title>  خيارات البحث </ion-title> 
+        <ion-buttons start>
+          <button (click)="close()" style="background:transparent">
+            <custom-icon set="evil" name="close" color="white" style="font-size:2em"></custom-icon> 
+          </button>
+        </ion-buttons> 
+      </ion-navbar>
+  </ion-header>
+
+
+<ion-content >
+  <ion-list no-padding >
+    <ion-row id="listRow">
+      <ion-list>
+        <ion-item style="padding-top:24px">
+              <ion-label color="primary" stacked>نوع السيارة</ion-label>
+              <ion-select [(ngModel)]="carType" [placeholder]="'BMW/Mercedes'">
+                  <ion-option value="bmw"> BMW </ion-option>
+                  <ion-option value="mercedes"> Mercedes </ion-option>
+              </ion-select>
+        </ion-item>
+        <ion-item  style="padding-top:24px">
+              <ion-label color="primary" stacked> سنة الصنع</ion-label>
+              <ion-input type="number" placeholder="2008"></ion-input>
+        </ion-item>
+        <ion-item  style="padding-top:24px">
+              <ion-label color="primary" stacked> الأميال المقطوعة </ion-label>
+              <ion-input type="text" placeholder="12300 كيلو متر"></ion-input>
+        </ion-item>
+        <ion-item  style="padding-top:24px">
+              <ion-label color="primary" stacked> سعة المحرك </ion-label>
+              <ion-input type="text" placeholder="3000 سي سي"></ion-input>
+        </ion-item>
+        <ion-item style="padding-top:24px">
+              <ion-label color="primary" stacked>نوع الوقود </ion-label>
+              <ion-select [(ngModel)]="carType" [placeholder]="'ممتاز/جيد جدا'">
+                  <ion-option value="perfect"> ممتاز </ion-option>
+                  <ion-option value="Vgood"> جيد جدا </ion-option>
+              </ion-select>
+        </ion-item>
+         
+        <div id="salleryMainDiv">
+                <ion-item>
+                    <ion-label color="primary" stacked>   السعر من </ion-label>
+                    <ion-input type="text" placeholder="  ريال سعودي 140.000 " no-margin>  </ion-input>
+                </ion-item>
+                 <ion-item>
+                    <ion-label color="primary" stacked>  الي </ion-label>
+                    <ion-input type="text" placeholder="140,000 ريال سعودي" no-margin></ion-input>
+                 </ion-item>
+        </div>        
+      </ion-list>
+    </ion-row>
+  </ion-list>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+      <button ion-button color="primary">تأكيد</button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,66 @@
+<!--
+  Generated template for the SignUpVerifyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border class="headerShadow">
+    <ion-navbar>
+      <ion-title>قيادتي</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="outer-content" >
+  <!-- <form [formGroup]="verifyForm">  -->
+  <form>
+    <ion-list >
+        <ion-list-header no-lines>
+            لقد ارسلنا لك رمز تحقق
+            <h5> ادخل كود التحقق الذي تم ارسالة للرقم {{phoneParam}}</h5>
+        </ion-list-header>
+        <ion-row id="inputsRow">
+            <ion-col>
+              <ion-item>
+                <ion-input #input1 type="text" pattern="\d*" maxlength="1" (input)="onSearchChange1($event.target.value)"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+                <ion-input #input2 type="text" pattern="\d*" maxlength="1" (keyup)="moveFocus(input1)" (input)="onSearchChange2($event.target.value)"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                  <ion-input #input3 type="text" pattern="\d*" maxlength="1" (keyup)="moveFocus(input2)" (input)="onSearchChange3($event.target.value)"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-input #input4 type="text" pattern="\d*" maxlength="1" (keyup)="moveFocus(input3)" (input)="onSearchChange4($event.target.value)"></ion-input>            
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item >
+                  <ion-input #input5 type="text" pattern="\d*" maxlength="1" (keyup)="moveFocus(input4)" (input)="onSearchChange5($event.target.value)"></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item >
+                  <ion-input type="text" autofocus #input6 pattern="\d*" maxlength="1" (keyup)="moveFocus(input5)" (input)="onSearchChange6($event.target.value)"></ion-input>
+                </ion-item>
+              </ion-col>
+          </ion-row>
+        <!--
+        <p class="errorMsg" *ngIf="submitAttempt" style="color: #ea6153; text-align:center">Please insert valid number.</p>        
+        -->
+        <ion-row style="margin-top:48px">
+            <button  *ngIf="Key1 == null || Key2 == null || Key3 == null || Key4 == null || Key5 == null || Key6 == null " ion-button block disabled >تأكيد</button>     
+            <button  *ngIf="Key1 != null && Key2 != null && Key3 != null && Key4 != null && Key5 != null && Key6 != null " ion-button block (click)="verify(input1.value, input2.value, input3.value, input4.value, input5.value, input6.value)" >تأكيد</button>
+        </ion-row>
+    </ion-list>
+  </form>
+ 
+</ion-content>
+

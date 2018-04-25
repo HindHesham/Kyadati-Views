@@ -1,0 +1,104 @@
+<!--
+  Generated template for the InsuranceCompaniesDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border class="headerShadow">
+    <ion-navbar hideBackButton="true">
+        <ion-row style="margin-top:20px">
+            <div class="logoSchool">
+                <img src="assets/icon/i-car-1.png" />
+            </div>
+        </ion-row>
+                  
+        <div style="text-align:center">
+            <p id="schoolName">مكان رقم ١ </p>
+            <p id="schoolCountry">المنطقة، المدينة</p>
+        </div>
+    </ion-navbar>     
+</ion-header>
+
+<ion-content padding>
+    
+        <ion-list>
+          <ion-row id="iconRow" class="shadowAndRadius" >
+              <ion-col>
+                  
+                  <ion-buttons class="iconContaine">
+                      <button ion-button icon-only clear>
+                        <custom-icon set="evil" name="map" ></custom-icon>
+                      </button>
+                  </ion-buttons>
+                  الخريطه
+                
+              </ion-col>
+              <ion-col >
+                  <ion-buttons class="iconContaine">
+                      <button ion-button icon-only clear>
+                        <custom-icon set="evil" name="call" ></custom-icon>
+                      </button>
+                    </ion-buttons>
+                    إتصال
+                    
+              </ion-col>
+              <ion-col (click)="presentPopover()">
+                  <ion-buttons class="iconContaine">
+                      <button ion-button icon-only clear>
+                        <custom-icon set="evil" name="comment" ></custom-icon>
+                      </button>
+                    </ion-buttons>
+                    إضافة تعليق
+              </ion-col>
+          </ion-row>
+          <ion-row id="secondRow" class="rowShadow">
+              <p>
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة،
+                  <br>
+                   لقد تم توليد هذا النص من مولد النص العربى، 
+                   <br>
+                   حيث يمكنك أن تولد مثل هذا النص 
+                   <br>
+                   أو العديد من النصوص الأخرى 
+                   <br>
+                   إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.            
+              </p>
+            </ion-row>
+           
+            <ion-row id="boxRow">
+                <ion-col class="shadowAndRadius" style="margin-left:16px;">
+                    
+                    <div class="titleBoxRow">
+                       <P>تأمين شامل</P>
+                    </div>
+                    <div class="detailsBoxRow">
+                        <p class="sallery">3199</p>
+                        <p class="name">ريال سعودي</p>
+                    </div>
+                </ion-col>
+                <ion-col class="shadowAndRadius">
+                    <div class="titleBoxRow">
+                        <P> ضد الغير </P>
+                    </div>
+                    <div class="detailsBoxRow">
+                        <p class="sallery">2199</p>
+                        <p class="name">ريال سعودي</p>
+                    </div>
+                </ion-col>
+            </ion-row>
+        
+            <h5>
+                التعليقات
+            </h5>
+            
+            <ion-row class="rowShadow">
+                <p id="userName">
+                  محمد القاسم
+                </p>
+                <p id="commentContaines">
+                    هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخق.            
+                </p>
+            </ion-row>
+          
+        </ion-list>
+</ion-content>
